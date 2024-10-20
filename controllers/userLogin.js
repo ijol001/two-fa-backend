@@ -25,7 +25,6 @@ async function userLogin(req, res) {
       return res.status(401).json({ "status": "failed", "message": "Email or Password is not valid" });
     }
 
-    // Generate OTP
     let otp = otpGenerator.generate(6, {
       upperCaseAlphabets: false,
       lowerCaseAlphabets: false,
